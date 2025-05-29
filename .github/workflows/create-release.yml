@@ -8,5 +8,7 @@ on:
 
 jobs:
   create-release:
+    with:
+      sonar: false
     uses: liquibase/build-logic/.github/workflows/create-release.yml@main
     secrets: inherit
