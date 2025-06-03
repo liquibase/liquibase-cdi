@@ -16,3 +16,4 @@ jobs:
     with:
       java: '[8]'
       javaBuildVersion: '8'
+      skipSonar: true
