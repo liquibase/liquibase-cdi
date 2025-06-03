@@ -8,8 +8,9 @@ on:
 
 jobs:
   nightly-build:
-    uses: liquibase/build-logic/.github/workflows/os-extension-test.yml@main
+    uses: liquibase/build-logic/.github/workflows/os-extension-test.yml@DEVX-12
     with:
       nightly: true
       java: '[8]'
+      javaBuildVersion: '8'
     secrets: inherit

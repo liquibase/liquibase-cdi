@@ -11,5 +11,9 @@ on:
 jobs:
   #delete this block if the repository you are creating is a PRO extension
   build-test:
-    uses: liquibase/build-logic/.github/workflows/os-extension-test.yml@main
+    uses: liquibase/build-logic/.github/workflows/os-extension-test.yml@DEVX-12
     secrets: inherit
+    with:
+      java: '[8]'
+      javaBuildVersion: '8'
+      skipSonar: true
