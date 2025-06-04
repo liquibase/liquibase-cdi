@@ -7,7 +7,7 @@ on:
 
 jobs:
   attach-artifact-to-release:
-    uses: liquibase/build-logic/.github/workflows/extension-attach-artifact-release.yml@DEVX-12
+    uses: liquibase/build-logic/.github/workflows/extension-attach-artifact-release.yml@main
     secrets: inherit
     with:
       javaBuildVersion: '8'
