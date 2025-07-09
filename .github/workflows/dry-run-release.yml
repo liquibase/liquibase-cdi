@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   dry-run-attach-artifact-to-release:
-    uses: liquibase/build-logic/.github/workflows/extension-attach-artifact-release.yml@allow-defining-java-build-version
+    uses: liquibase/build-logic/.github/workflows/extension-attach-artifact-release.yml@main
     secrets: inherit
     with:
       dry_run: true
