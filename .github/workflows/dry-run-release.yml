@@ -19,7 +19,6 @@ jobs:
     with:
       dry_run: true
       dry_run_version: "0.0.${{ github.run_number }}"
-      javaBuildVersion: 8
 
   dry-run-get-draft-release:
     needs: dry-run-attach-artifact-to-release
