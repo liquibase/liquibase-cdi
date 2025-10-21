@@ -9,5 +9,3 @@ jobs:
   release:
     uses: liquibase/build-logic/.github/workflows/extension-release-published.yml@main
     secrets: inherit
-    with:
-      javaBuildVersion: 8
