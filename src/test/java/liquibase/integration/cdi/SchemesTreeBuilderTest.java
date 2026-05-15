@@ -1,6 +1,5 @@
 package liquibase.integration.cdi;
 
-import com.google.common.base.Strings;
 import liquibase.integration.cdi.annotations.LiquibaseSchema;
 import liquibase.integration.cdi.exceptions.CyclicDependencyException;
 import liquibase.integration.cdi.exceptions.DependencyNotFoundException;
@@ -53,7 +52,7 @@ public class SchemesTreeBuilderTest {
         Collection<LiquibaseSchema> previous = new ArrayList<LiquibaseSchema>(resolved.size());
 
         for (LiquibaseSchema liquibaseSchema : resolved) {
-            if (!Strings.isNullOrEmpty(liquibaseSchema.depends())) {
+            if (liquibaseSchema.depends() != null && !liquibaseSchema.depends().isEmpty()) {
                 assertFalse(isDependencyMissed(liquibaseSchema, previous));
             }
             previous.add(liquibaseSchema);
@@ -78,7 +77,7 @@ public class SchemesTreeBuilderTest {
 
         Collection<LiquibaseSchema> previous = new ArrayList<LiquibaseSchema>(resolved.size());
         for (LiquibaseSchema liquibaseSchema : resolved) {
-            if (!Strings.isNullOrEmpty(liquibaseSchema.depends())) {
+            if (liquibaseSchema.depends() != null && !liquibaseSchema.depends().isEmpty()) {
                 assertFalse(isDependencyMissed(liquibaseSchema, previous));
             }
             previous.add(liquibaseSchema);
